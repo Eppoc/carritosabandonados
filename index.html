@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estadísticas de Carritos Abandonados</title>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="css\font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="estilo\estilo.css">
+    <script src="script\carritosabandonados.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <a href="#">BD-general</a>
+        <a class = "menub" href="https://eppoc.github.io/cappaypalbotones/">BD-Boton negro</a>
+        <a href="#">BD-Certificados</a>
+    </nav>
+
+    <header>
+        <h1>Estadísticas de Carritos Abandonados</h1>
+    </header>
+    <div class="container">
+        <div class="section">
+           <div id="nota">
+            <p><strong>NOTAS:</strong><br>
+            Para reducir falsos positivos se filtran correos mal escritos y solo se captura cuando el usuario escribe algo en la casilla correo de cualquier oferta publicada.
+            <br>Capturando desde el 3 de Septiembre del 2023, los títulos de ofertas en cambio se incluyeron a partir del 1 de Noviembre del 2023.</p>
+            <p>Pequeño bug encontrado en redondeo de fechas, resolviendo...<br>Botones registro por día un poco "pofiados", resolviendo...</p>
+        </div>
+            <div class="stats">
+                <div id ="totalreg"class="stat">
+                    <p>Total de registros</p>
+                    <div class="valores" id = "total">0</div>
+                    <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                </div>
+                <div class="stat" id="botrep">
+                    <p>Repetidos</p>
+                    <div class="valores"id = "repetidos">0</div>
+                </div>
+                <div class="stat" id="sincompra">
+                    <p>Total abandonados</p>
+                    <div class="valores"id = "totalsincompra">0</div>
+                </div>
+                
+                <div id="sincompradia" class="stat">
+                    <p>Abandonados por día</p>
+                    <span id="sincomprapordia" class="resultado-consulta">0</span>
+                    <div class="boton-container">
+                        <button id="botonRetroceder" class="boton">
+                            <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                        </button>
+                        <button id="botonAvanzar" class="boton">
+                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    
+                </div>
+                <div class="stat" id="concompra">
+                    <p>Total con compra</p>
+                    <div class="valores"id = "totalconcompra">0</div>
+                </div>
+
+                <div id="concompradia"class="stat">
+                    <p>Compras por día</p>
+                    <span id="concomprapordia" class="resultado-consulta">0</span>
+                    <div class="boton-container">
+                    <button id="botonRetrocedercon" class="boton">
+                        <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                    </button>
+                    
+                    <button id="botonAvanzarcon" class="boton">
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+                </div>
+               
+            </div>
+            <div class="table-container"> 
+            <table>
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Título de oferta</th>
+                        <th>Fecha de registro</th>
+                       
+                       
+                    </tr>
+                </thead>
+                <tbody id="tabla-correos-body">
+                   <p id="cargando">Cargando...</p> 
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+    
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        
+          function getCurrentDate() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            return now.toLocaleDateString('es-ES', options);
+          }
+      
+     
+          const currentDateElement = document.getElementById('current-date');
+          if (currentDateElement) {
+            currentDateElement.textContent = getCurrentDate();
+          }
+        });
+      </script>
+      <footer class="animated-footer">
+        <div class="scrolling-text">En desarrollo:  <span id="current-date"></span></div>
+       
+    
+    </footer>
+</body>
+</html>

@@ -1,0 +1,206 @@
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            font-family: "Arial", sans-serif;
+            background-color: #eee5ed;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            font-family: "Arial", sans-serif;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        nav a {
+            font-family: "Arial", sans-serif;
+            color: #fff;
+            text-decoration: none;
+            padding: 0px 20px;
+        }
+
+        .container {
+            font-family: "Arial", sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: "Arial", sans-serif;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .section {
+            font-family: "Arial", sans-serif;
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px 0;
+        }
+
+        table {
+            margin: 0;
+    padding: 0;
+            font-family: "Arial", sans-serif;
+            border: 1px solid #ccc; /* Borde suave */
+          
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            font-family: "Arial", sans-serif;
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd; /* Borde superior */
+   
+
+        }
+
+        th {
+            font-family: "Arial", sans-serif;
+            background-color: #eee5ed;
+            color: black;
+        }
+
+        tr:nth-child(even) {
+            font-family: "Arial", sans-serif;
+            background-color: #f2f2f2;
+        }
+        .stats .stat {
+    display: inline-block;
+    margin-right: 20px; /* Agrega margen derecho entre los elementos si es necesario */
+    text-align: center;
+    font-size: 12px;
+}
+.stats{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.stat{
+    border: 1px solid #ddd; /* Borde superior */
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 20%;
+    border-radius: 12px;
+    cursor: pointer;
+    
+}
+.stat:hover{
+    background-color: #2b74c8;
+    color: white;
+}
+#nota{
+    font-size: 12px;
+  background: #ccc; /* Borde suave */
+    padding:10px;
+}
+.table-container {
+            max-height: 400px; /* Establece la altura máxima deseada */
+            overflow-y: auto; /* Agrega barras de desplazamiento vertical si es necesario */
+            font-size: 12px;
+            margin: 0;  /* Agregar esta línea para eliminar los márgenes predeterminados */
+    padding: 0; 
+        }
+        tr:hover{
+            background-color: #bbafe2;
+            cursor: pointer;
+        }
+        .animated-footer {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background-color: #333; /* Cambia el color de fondo según tus preferencias */
+}
+
+.scrolling-text {
+  animation: scroll 15s linear infinite;
+  color: #fff; /* Cambia el color del texto según tus preferencias */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.boton {
+    background-color: black;
+    color:white;
+    
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    z-index: 9999999;
+    border-radius: 12px;
+}
+.boton:hover{
+    background-color: #ffc700;
+    color:black;
+}
+#concompra{
+   
+    border-radius: 12px;
+   
+    background-color: #eee5ed;
+}
+#totalreg{
+    border-bottom-left-radius: 0px;
+}
+#concompra:hover{
+    background-color: #2b74c8;
+    color: white;
+}
+#sincompra{
+   
+    border-radius: 12px;
+    background-color: #bbafe2;
+}
+.valores{
+    font-size: 15px;
+}
+#sincompradia{
+    border-radius: 12px;
+    background-color: #bbafe2;
+}
+#sincomprapordia{
+    font-size: 15px;
+}
+#concomprapordia{
+      font-size: 15px;
+}
+#sincompra:hover{
+    background-color: #2b74c8;
+    color: white;
+}
+#sincompradia:hover{
+    background-color: #2b74c8;
+    color: white;
+}
+.menub:hover{
+    background-color: #ffc700;
+    color: black;
+}
+#concompradia{
+     border-bottom-right-radius: 0px;
+      background-color: #eee5ed;
+}
+#concompradia:hover{
+    background-color: #2b74c8;
+    color: white;
+}
